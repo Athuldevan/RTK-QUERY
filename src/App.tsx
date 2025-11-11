@@ -4,7 +4,7 @@ import Singup from "./components/Singup";
 import TodoList from "./components/TodoList";
 import { useGetTodoQuery } from "./services/todoApiSlice";
 import Footer from "./components/Footer";
-
+import Heading from "./components/Heading";
 
 function App() {
   const [signUp, setSignUp] = useState(false);
@@ -14,6 +14,7 @@ function App() {
   if (isError) return <div>Error in fetching</div>;
   return (
     <>
+      <Heading/>
       <Login />
       <button
         onClick={() => setSignUp(!signUp)}
