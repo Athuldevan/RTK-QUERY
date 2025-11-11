@@ -3,6 +3,8 @@ import Login from "./components/login";
 import Singup from "./components/Singup";
 import TodoList from "./components/TodoList";
 import { useGetTodoQuery } from "./services/todoApiSlice";
+import Footer from "./components/Footer";
+
 
 function App() {
   const [signUp, setSignUp] = useState(false);
@@ -20,6 +22,7 @@ function App() {
         Show Signup
       </button>
       {signUp && <Singup />}
+      <Footer/>
       <TodoList todos={data.todos} />
     </>
   );
